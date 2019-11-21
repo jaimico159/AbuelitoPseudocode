@@ -1,0 +1,4 @@
+function showArticles(param) {
+  set articles = Article.getAll()
+  return renderView(articles)
+}

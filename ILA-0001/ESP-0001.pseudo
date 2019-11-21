@@ -1,0 +1,18 @@
+class Article {
+  id
+  name
+  description
+  photo
+  sellingPrice
+  purchasePrice
+  expirationDate
+
+  constructor(id,name, description, photo, sellingPrice, purchasePrice, expirationDate) {
+    set id = id
+    set name = name
+    set description = description
+    set photo = photo
+    set sellingPrice = sellingPrice
+    set purchasePrice = purchasePrice
+  }
+}
