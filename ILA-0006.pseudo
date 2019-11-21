@@ -1,0 +1,18 @@
+## esp 06-01 view add category
+<h1> Añadir Categoria <h1>
+<form action={addCategory} >
+    nombre <input name="name"/> <br>
+    descripction <input name="description" />
+</form>
+
+## esp 06-02 controller add category
+function addCategory(request) do
+    if(request.isPost()) do
+        set category = Categoria.new()
+        category.name = post("name")
+        category.description = post("description")
+        category.save()
+        return redirect(showCategories)
+    end
+    return renderError()
+end
