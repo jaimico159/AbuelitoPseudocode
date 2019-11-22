@@ -1,0 +1,9 @@
+INICIO
+  SI (artículos es vacío)
+    MENSAJE ('no hay artículos')
+  SINO
+    PARA CADA (artículo DE artículos)
+        MOSTRAR artículo.datos EN INTERFAZ-INT0001
+    FIN PARA
+  FIN SI
+FIN

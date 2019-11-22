@@ -12,6 +12,6 @@ def update
   if noti_temp.update
     format.html { redirect_to noti_temp, notice: 'Plantilla Editada correctamente' }
   else
-    format.html { render :new, alert: 'No se pudo editar Plantilla' }
+    format.html { render :edit, alert: 'No se pudo editar Plantilla' }
   end
 end

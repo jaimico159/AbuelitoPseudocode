@@ -1,0 +1,5 @@
+production:
+  <<: *default
+  database: labEnroll_production
+  username: labEnroll
+  password: <%= ENV['ABUELITO_DATABASE_PASSWORD'] %>
