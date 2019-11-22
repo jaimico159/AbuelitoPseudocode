@@ -1,0 +1,8 @@
+INICIO
+  boton = Menu.BotonCategorias
+  SI(usuario.click(boton)){
+    index
+  }
+  FIN SI
+
+FIN
