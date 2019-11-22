@@ -1,0 +1,7 @@
+INICIO
+  boton = BotonNuevaCategoria
+  SI(usuario.click(boton)){
+    new
+  }
+  FIN SI
+FIN
