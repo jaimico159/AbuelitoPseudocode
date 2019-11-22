@@ -1,5 +1,6 @@
 INICIO
-  form = (formulario de INT-0002)
-  form.campos = OBTENER DATOS (artículo)
-  IR A (INT-0002)
+  SI(usuario.enviarFormulario == true){
+    update
+  }
+  FIN SI
 FIN
