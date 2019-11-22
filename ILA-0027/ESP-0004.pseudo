@@ -1,0 +1,11 @@
+INICIO
+  boton = BotonEditarPlantilla
+  SI(usuario.click(boton)){
+    edit
+  }
+  FIN SI
+FIN
+
+def edit
+  redirect_to(edit_notification_templates_path)
+end

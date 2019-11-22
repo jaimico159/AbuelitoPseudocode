@@ -1,0 +1,11 @@
+INICIO
+  boton = BotonNuevaPlantilla
+  SI(usuario.click(boton)){
+    mostrarFormulario()
+  }
+  FIN SI
+FIN
+
+function mostrarFormulario(){
+  redirect_to(new_notification_template_path)
+}

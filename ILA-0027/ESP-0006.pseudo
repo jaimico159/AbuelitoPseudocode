@@ -1,0 +1,18 @@
+INICIO
+  boton = BotonEliminarPlantilla
+  SI(usuario.click(boton)){
+    destroy
+  }
+  FIN SI
+
+FIN
+
+def destroy
+noti_temp = NotificationTemplate.find(params[:id])
+  respond_to do |format|
+  if noti_temp.destroy
+    format.html { redirect_to notification_templates_path, notice: 'Plantilla Eliminada Correctamente' }
+  else
+    format.html { redirect_to notification_templates_path, alert: 'Error al Eliminar Plantilla' }
+  end
+end
