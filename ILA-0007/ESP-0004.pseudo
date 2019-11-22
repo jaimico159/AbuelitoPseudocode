@@ -1,0 +1,11 @@
+def update
+  category = Category.find(params[:id])
+
+  respond_to do |format|
+    if category.update
+      format.html { redirect_to category, notice: 'Categoría Editada correctamente' }
+    else
+      format.html { render :edit, alert: 'No se pudo editar Categoría' }
+    end
+  end
+end

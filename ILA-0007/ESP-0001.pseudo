@@ -1,0 +1,7 @@
+INICIO
+  boton = BotonEditarCategoria
+  SI(usuario.click(boton)){
+    edit
+  }
+  FIN SI
+FIN

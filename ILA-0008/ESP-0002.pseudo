@@ -1,0 +1,10 @@
+def destroy
+  category = Category.find(params[:id])
+  respond_to do |format|
+    if category.destroy
+      format.html { redirect_to categories_path, notice: 'Categoría Eliminada Correctamente' }
+    else
+      format.html { redirect_to categories_path, alert: 'Error al eliminar Categoría' }
+    end
+  end
+end

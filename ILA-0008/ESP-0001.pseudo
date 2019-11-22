@@ -1,0 +1,8 @@
+INICIO
+  boton = BotonEliminarCategoria
+  SI(usuario.click(boton)){
+    destroy
+  }
+  FIN SI
+
+FIN

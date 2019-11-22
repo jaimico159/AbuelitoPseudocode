@@ -1,0 +1,8 @@
+INICIO
+  usuario.activar_lector
+  SI(usuario.leer_codigo_barras == true){
+    articulo = get_by_sku
+  }
+  FIN SI
+  pedido.add_article(articulo)
+FIN
