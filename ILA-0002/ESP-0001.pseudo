@@ -1,4 +1,7 @@
 INICIO
-  datos = OBTENER DATOS (formulario de INT-0002)
-  artículo = NUEVO ARTÍCULO (datos)
+  boton = BotonNuevoArticulo
+  SI(usuario.click(boton)){
+    new
+  }
+  FIN SI
 FIN

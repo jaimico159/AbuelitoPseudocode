@@ -1,0 +1,11 @@
+def create
+  article = Article.new(params)
+  
+  respond_to do |format|
+    if article.save
+      format.html { redirect_to article, notice: 'Artículo creado correctamente' }
+    else
+      format.html { render :new, alert: 'No se pudo crear Artículo' }
+    end
+  end
+end
