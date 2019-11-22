@@ -1,0 +1,31 @@
+# Especificacion 05-01 Modelo de Categoria
+class Categoria do
+    id
+    name
+    description
+    photo
+    products
+    constructor(id,name,description,photo) do
+        set id = id
+        set name = name
+        set description = description
+        set photo = photo
+    end
+end
+
+# Especificacion 05-02 Funcion mostrar Categoria
+function showCategories() do
+    set categories = Categoria.getAll()
+    return renderView(categories)
+end
+
+# Especificacion 05-02 Vista de la Pagina
+<h1>Categorias</h1>
+<% foreach (categoria in categories ) %>
+    <div>
+        <figure>
+            <img src={categoria.photo}>
+            <caption>{categoria.name}</caption>
+        </figure>
+    </div>
+<% endfor %>
