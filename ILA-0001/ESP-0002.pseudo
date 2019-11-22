@@ -1,3 +1,7 @@
-def index
-  articles = Article.all
-end
+INICIO
+  boton = Menu.BotonArtículos
+  SI(usuario.click(boton)){
+    index
+  }
+  FIN SI
+FIN

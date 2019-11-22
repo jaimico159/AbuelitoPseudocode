@@ -1,0 +1,6 @@
+INICIO
+  boton = (BotonEliminarArtículo de INT-0001)
+  SI(usuario.click(boton))
+    destroy
+  FIN SI
+FIN

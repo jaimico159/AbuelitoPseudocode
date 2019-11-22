@@ -1,6 +1,6 @@
 INICIO
   SI(usuario.enviarFormulario == true){
-    update
+    create
   }
   FIN SI
 FIN

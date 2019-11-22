@@ -1,0 +1,9 @@
+def destroy
+article = Article.find(params[:id])
+  respond_to do |format|
+  if article.destroy
+    format.html { redirect_to articles_path, notice: 'Artículo Eliminado Correctamente' }
+  else
+    format.html { redirect_to articles_path, alert: 'Error al Eliminar Artículo' }
+  end
+end
