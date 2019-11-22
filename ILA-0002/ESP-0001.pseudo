@@ -1,0 +1,4 @@
+INICIO
+  datos = OBTENER DATOS (formulario de INT-0002)
+  artículo = NUEVO ARTÍCULO (datos)
+FIN

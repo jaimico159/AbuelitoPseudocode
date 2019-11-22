@@ -1,0 +1,6 @@
+def delete_notification
+  if kardex_header.stock >= kardex_header.minimun_stock
+  notifications.each do |not|
+    not.destroy
+  end
+end

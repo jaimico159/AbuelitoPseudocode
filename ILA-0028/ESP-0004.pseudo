@@ -1,0 +1,11 @@
+def create
+  noti_temp = NotificationTemplate.new(params)
+  
+  respond_to do |format|
+    if noti_temp.save
+      format.html { redirect_to noti_temp, notice: 'Plantilla Creada correctamente' }
+    else
+      format.html { render :new, alert: 'No se pudo crear Plantilla' }
+    end
+  end
+end

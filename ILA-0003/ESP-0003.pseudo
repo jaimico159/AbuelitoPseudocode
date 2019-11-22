@@ -1,0 +1,10 @@
+def update
+  article = Article.find(params[:id])
+  
+  respond_to do |format|
+  if article.update
+    format.html { redirect_to article, notice: 'Artículo editado correctamente' }
+  else
+    format.html { render :edit, alert: 'No se pudo editar Artículo' }
+  end
+end

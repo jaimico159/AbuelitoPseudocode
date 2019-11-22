@@ -1,0 +1,7 @@
+INICIO
+  boton = BotonNuevaPlantilla
+  SI(usuario.click(boton)){
+    mostrarFormulario()
+  }
+  FIN SI
+FIN

@@ -1,0 +1,3 @@
+def index
+  noti_temp = NotificationTemplates.all
+end

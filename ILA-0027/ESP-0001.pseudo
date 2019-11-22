@@ -1,1 +1,8 @@
-print "Hello World"
+INICIO
+  boton = Menu.BotonNotificaciones
+  SI(usuario.click(boton)){
+    desplegarLista()
+  }
+  FIN SI
+
+FIN

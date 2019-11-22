@@ -1,0 +1,8 @@
+INICIO
+  boton = BotonEliminarPlantilla
+  SI(usuario.click(boton)){
+    destroy
+  }
+  FIN SI
+
+FIN

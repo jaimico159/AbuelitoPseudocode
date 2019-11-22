@@ -1,0 +1,7 @@
+INICIO
+  boton = BotonEditarPlantilla
+  SI(usuario.click(boton)){
+    edit
+  }
+  FIN SI
+FIN

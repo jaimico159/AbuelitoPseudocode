@@ -1,0 +1,9 @@
+INICIO
+  boton = BotonNotificaciones
+  SI(usuario.click(boton)){
+    mostrarListaDesplegable(index)
+  } SINO {
+    cerrarListaDesplegable()
+  }
+  FIN SI
+FIN

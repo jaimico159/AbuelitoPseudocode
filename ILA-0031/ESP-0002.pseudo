@@ -1,0 +1,6 @@
+def index
+  notifications = Notification.where(status: 'active')
+  respond_to do |format|
+    format.json { json: notifications }    
+  end
+end
