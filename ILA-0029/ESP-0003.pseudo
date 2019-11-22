@@ -1,0 +1,6 @@
+INICIO
+  SI(usuario.enviarFormulario == true){
+    update
+  }
+  FIN SI
+FIN

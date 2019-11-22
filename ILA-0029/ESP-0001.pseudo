@@ -5,7 +5,3 @@ INICIO
   }
   FIN SI
 FIN
-
-def edit
-  noti_temp = NotificationTemplate.find(params[:id])
-end

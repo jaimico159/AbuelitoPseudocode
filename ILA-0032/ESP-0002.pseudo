@@ -1,0 +1,6 @@
+def create_notification
+  if kardex_header.stock <= kardex_header.minimun_stock
+  noti = NotificationTemplate.find_by_name('minimun_stock')
+  notification = Notification.new(notification_template: noti, article: self)
+  notification.save
+end

@@ -1,0 +1,6 @@
+INICIO
+  SI(usuario.realizarVenta){
+    checkStock()
+  }
+  FIN SI
+FIN

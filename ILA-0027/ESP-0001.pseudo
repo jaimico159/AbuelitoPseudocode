@@ -6,8 +6,3 @@ INICIO
   FIN SI
 
 FIN
-
-function desplegarLista(){
-  notificaciones = NotificationTemplates.all
-  render :json notificaciones
-}
