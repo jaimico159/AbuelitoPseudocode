@@ -1,7 +1,7 @@
 INICIO
-  boton = BotonCancelarVenta
+  boton = Menu.BotonNotificaciones
   SI(usuario.click(boton)){
-    destroy
+    index
   }
   FIN SI
 

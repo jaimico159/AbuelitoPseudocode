@@ -1,0 +1,6 @@
+def update_stock
+  total = 0  
+  kardex_details.each do |kd|
+    total += kd.amount*kd.transaction_type
+  end
+end

@@ -1,0 +1,14 @@
+def destroy
+  sale = Sale.find(params[:id])
+  sale.kardex_details.each do |kd|
+    kd.destroy
+  end
+
+  respond_to do |format|
+    if sale.destroy
+      format.html { redirect_to sales_path, notice: 'Venta cancelada correctamente' }
+    else
+      format.html { redirect_to sales_path, alert: 'Error al cancelar Venta' }
+    end
+  end
+end

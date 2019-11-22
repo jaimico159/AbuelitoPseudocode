@@ -1,0 +1,8 @@
+INICIO
+  boton = BotonMarcarAbastecimiento
+  SI(usuario.click(boton)){
+    confirm_supplying
+  }
+  FIN SI
+
+FIN

@@ -1,0 +1,11 @@
+def create
+  supplier = Supplier.new(params)
+  
+  respond_to do |format|
+    if supplier.save
+      format.html { redirect_to article, notice: 'Proveedor creado correctamente' }
+    else
+      format.html { render :new, alert: 'No se pudo crear Proveedor' }
+    end
+  end
+end

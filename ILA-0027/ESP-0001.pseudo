@@ -1,7 +1,7 @@
 INICIO
-  boton = Menu.BotonNotificaciones
+  boton = Menu.BotonProveedores
   SI(usuario.click(boton)){
-    desplegarLista()
+    index
   }
   FIN SI
 

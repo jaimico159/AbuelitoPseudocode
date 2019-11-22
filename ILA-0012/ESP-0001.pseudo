@@ -1,8 +1,7 @@
 INICIO
-  boton = BotonCancelarVenta
+  boton = BotonNuevoAbastecimiento
   SI(usuario.click(boton)){
-    destroy
+    new
   }
   FIN SI
-
 FIN

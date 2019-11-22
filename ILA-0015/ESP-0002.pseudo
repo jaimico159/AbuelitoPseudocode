@@ -1,0 +1,3 @@
+def index
+  suppliers = Supplyier.all
+end

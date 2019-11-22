@@ -1,0 +1,11 @@
+def confirm_supplying
+  supplying = Supplying.find(params[:id])
+  supplying.status = 'confirmed'
+  respond_to do |format|
+    if supplying.update
+      format.html { redirect_to categories_path, notice: 'Abastecimiento Actualizado Correctamente' }
+    else
+      format.html { redirect_to categories_path, alert: 'Error al actualizar Categoría' }
+    end
+  end
+end

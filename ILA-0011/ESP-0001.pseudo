@@ -1,5 +1,5 @@
 INICIO
-  boton = BotonCancelarVenta
+  boton = BotonEliminarCategoria
   SI(usuario.click(boton)){
     destroy
   }

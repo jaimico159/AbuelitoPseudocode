@@ -1,0 +1,6 @@
+def search_article(keyword)
+  article = Article.where(where(['name LIKE ?', "%#{keyword}%"]))
+    .or(Article.where(['sku LIKE ?', "%#{keyword}%"]))
+
+  render :json, article
+end

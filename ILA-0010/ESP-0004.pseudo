@@ -1,0 +1,26 @@
+def create
+  sale = Sale.new
+
+  articles = params.map do |article|
+    [Article.find(article['id']), article['amount']]
+  end
+
+  articles.each do |article|
+    kd = KardexDetail.new
+    kd.article = article
+    kd.amount = article[1]
+    kd.transaction_type = 1
+    kd.kardex_header = article[0].kardex_header
+    kd.price = article[0].kardex_header.current_price
+    kd.cost = article[0].kardex_header.current_cost
+    kd.sub_total = kd.price*kd.amount
+    kd.save
+    sale.kardex_details << kd
+  end
+
+  sale.save
+
+  respond_to do |format|
+    format.html { render: new_sales_path, notice: 'Venta registrada satisfactoriamente' }
+  end
+end

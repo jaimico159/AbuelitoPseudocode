@@ -1,0 +1,27 @@
+def create
+  supplying = Supplying.new
+
+  articles = params.map do |article|
+    [Article.find(article['id']), article['amount']]
+  end
+
+  articles.each do |article|
+    kd = KardexDetail.new
+    kd.article = article
+    kd.amount = article[1]
+    kd.transaction_type = -1
+    kd.kardex_header = article[0].kardex_header
+    kd.price = article[0].kardex_header.current_price
+    kd.cost = article[0].kardex_header.current_cost
+    kd.sub_total = kd.price*kd.amount
+    kd.save
+    supplying.kardex_details << kd
+  end
+
+  supplying.status = 'pendant'
+  supplying.save
+
+  respond_to do |format|
+    format.html { render: new_supplying_path, notice: 'Abastecimiento registrado satisfactoriamente' }
+  end
+end
